@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".BarCodeTestActivity" >
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/bg_color" />
+   <RelativeLayout
+       android:id="@+id/re_patrolscan"
+       android:layout_width="wrap_content"
+       android:layout_height="48dp"
+       android:layout_marginTop="10dp"
+       android:layout_weight="5"
+       android:background="@drawable/btn_list_item_bg"
+       android:clickable="true"
+       android:paddingLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_friends"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:contentDescription="@string/patrolscan_name"
+            android:src="@drawable/scan" />
+
+        <TextView
+            android:id="@+id/weburl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_friends"
+            android:text="@string/patrolscan_name"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/bg_color" />
+      <RelativeLayout
+          android:id="@+id/re_patrolnfc"
+          android:layout_width="wrap_content"
+          android:layout_height="48dp"
+          android:layout_marginTop="10dp"
+          android:layout_weight="5"
+          android:background="@drawable/btn_list_item_bg"
+          android:clickable="true"
+          android:paddingLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_friends1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:contentDescription="@string/patrolscan_name"
+            android:src="@drawable/nfc_meitu" />
+
+        <TextView
+            android:id="@+id/weburl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_friends1"
+            android:text="NFC扫码"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+            <View
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/bg_color" />
+    </LinearLayout>
+   
+    <RelativeLayout
+        android:id="@+id/webview_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:orientation="horizontal" >
+    <com.ustb.pullrefresh.ui.PullToRefreshWebView
+        android:id="@+id/webview_patrol"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </RelativeLayout>
+       	 	
+</LinearLayout>
